@@ -1,7 +1,6 @@
 # Al[Go]rithms
 
 Learning of algorithms and data structures in Go
-
 ![Go Learn](./assets/go-learn.640x640.png)
 
 ## License
