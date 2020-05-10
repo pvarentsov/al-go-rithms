@@ -2,7 +2,7 @@
 
 Learning of algorithms and data structures in Go
 
-![Go Learn](https://raw.githubusercontent.com/MariaLetta/free-gophers-pack/master/goroutines/png/2.png)
+![Go Learn](./assets/go-learn.640x640.png)
 
 ## License
 
