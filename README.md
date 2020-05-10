@@ -1,7 +1,10 @@
 # Al[Go]rithms
 
 Learning of algorithms and data structures in Go
-<div style="text-align:center"><img src="./assets/go-learn.640x640.png"></div>
+
+<p align="center"> 
+<img src="./assets/go-learn.640x640.png">
+</p>
 
 ## License
 
