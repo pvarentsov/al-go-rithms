@@ -10,9 +10,7 @@ Learning of algorithms and data structures in Go
 
 ### Stupid sorting:
 
-<video controls="controls">
-  <source type="video/mp4" src="./assets/algorithms/stupid-sorting-example.mp4"></source>
-</video>
+![](./assets/algorithms/stupid-sorting-example.gif)
 
 ## License
 
