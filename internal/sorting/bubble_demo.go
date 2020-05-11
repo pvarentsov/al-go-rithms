@@ -34,6 +34,9 @@ func BubbleSortDemo(inputArray []int, cmpClause int8, indexDelay time.Duration, 
 				if j+1 == (len(localArray) - i - 1) {
 					alreadySortedIndexes = append(alreadySortedIndexes, j+1)
 				}
+				if i+1 == (len(localArray) - 1) {
+					render.MarkArrayIndex(localArray, j, indexDelay, writer, alreadySortedIndexes)
+				}
 			}
 		}
 	}
@@ -49,6 +52,9 @@ func BubbleSortDemo(inputArray []int, cmpClause int8, indexDelay time.Duration, 
 				}
 				if j+1 == (len(localArray) - i - 1) {
 					alreadySortedIndexes = append(alreadySortedIndexes, j+1)
+				}
+				if i+1 == (len(localArray) - 1) {
+					render.MarkArrayIndex(localArray, j, indexDelay, writer, alreadySortedIndexes)
 				}
 			}
 		}
