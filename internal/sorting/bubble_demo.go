@@ -54,5 +54,7 @@ func BubbleSortDemo(inputArray []int, cmpClause int8, indexDelay time.Duration, 
 		}
 	}
 
+	writer.Stop()
+
 	return localArray
 }
