@@ -16,5 +16,5 @@ func main() {
 
 	sorting.StupidSortDemo(inputArray, -1, 200, 500)
 
-	fmt.Println("\nSorting finished!")
+	fmt.Print("Sorting finished!\n\n")
 }
