@@ -17,6 +17,15 @@ Learning of algorithms and data structures in Go
     <img src="./assets/algorithms/stupid-sorting-example.gif">
 </details>
 
+### [Bubble sorting](./internal/sorting/bubble.go)
+<details>
+  <summary>
+    Demo
+  </summary>
+    <br>
+    <img src="./assets/algorithms/bubble-sorting-example.gif">
+</details>
+
 ## License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](./LICENSE)
