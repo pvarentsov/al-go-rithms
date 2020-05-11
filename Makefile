@@ -5,6 +5,8 @@ help:
 	@echo "Targets:"
 	@echo
 	@echo "   stupid-sort   - Run stupid sorting demo"
+	@echo "   bubble-sort   - Run bubble sorting demo"
+	@echo
 	@echo "   fmt           - Format source code"
 
 .PHONY: stupid-sort
@@ -19,3 +21,4 @@ bubble-sort:
 fmt:
 	go fmt ./...
 
+.DEFAULT_GOAL := help
