@@ -10,9 +10,9 @@ Learning of algorithms and data structures in Go
 
 <details>
   <summary>
-    ### Stupid sorting
+    Stupid sorting
   </summary>
-  ![](./assets/algorithms/stupid-sorting-example.gif) 
+    <img src="./assets/algorithms/stupid-sorting-example.gif">
 </details>
 
 ## License
