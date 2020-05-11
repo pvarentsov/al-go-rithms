@@ -8,7 +8,7 @@ Learning of algorithms and data structures in Go
 
 ## Sorting
 
-### [Stupid sorting](./internal/sorting/stupid.go)
+### [Stupid](./internal/sorting/stupid.go)
 <details>
   <summary>
     Demo
@@ -17,7 +17,7 @@ Learning of algorithms and data structures in Go
     <img src="./assets/algorithms/stupid-sorting-example.gif">
 </details>
 
-### [Bubble sorting](./internal/sorting/bubble.go)
+### [Bubble](./internal/sorting/bubble.go)
 <details>
   <summary>
     Demo
