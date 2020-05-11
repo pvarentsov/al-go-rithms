@@ -13,7 +13,8 @@ Learning of algorithms and data structures in Go
     Stupid sorting
   </summary>
     <br>
-    <img src="./assets/algorithms/stupid-sorting-example.gif?x=" + Math.random()>
+    var imgUrl = `./assets/algorithms/stupid-sorting-example.gif?x=${Date.now()}`
+    <img :src="imgUrl">
 </details>
 
 ## License
