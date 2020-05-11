@@ -6,11 +6,12 @@ Learning of algorithms and data structures in Go
     <img src="./assets/go-learn.640x640.png">
 </p>
 
-## Demo
+## Sorting
 
+### [Stupid sorting](./internal/sorting/stupid.go)
 <details>
   <summary>
-    Stupid sorting
+    Demo
   </summary>
     <br>
     <img src="./assets/algorithms/stupid-sorting-example.gif">
