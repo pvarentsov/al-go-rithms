@@ -1,6 +1,8 @@
 package generator
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func IntArrayToStrArray(intArray []int) []string {
 	stringArray := make([]string, len(intArray))
