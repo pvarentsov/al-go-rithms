@@ -13,11 +13,11 @@ func BubbleSortDemo(inputArray []int, cmpClause int8, indexDelay time.Duration, 
 	sample := make([]int, len(inputArray))
 	copy(sample, inputArray)
 
-	arrayDemo := demo.NewArrayDemo(sample, uilive.New())
-
 	if cmpClause == 0 {
 		return sample
 	}
+
+	arrayDemo := demo.NewArrayDemo(sample, uilive.New())
 
 	alreadySortedIndexes := make([]int, 0)
 
