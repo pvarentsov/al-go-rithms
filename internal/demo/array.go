@@ -37,7 +37,7 @@ func (demo *ArrayDemo) SetColor(color color.Color) {
 }
 
 func (demo *ArrayDemo) Render(underscoredIndexes []int, coloredIndexes []int, boldIndexes []int, delay time.Duration) {
-	strArray := generator.IntArrayToStrArray(demo.array)
+	strArray := converter.IntArrayToStrArray(demo.array)
 
 	for _, i := range underscoredIndexes {
 		strArray[i] = color.OpUnderscore.Sprintf("%s", strArray[i])
