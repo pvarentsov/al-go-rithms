@@ -1,31 +1,31 @@
 package sorting
 
 func BubbleSort(inputArray []int, cmpClause int8) []int {
-	localArray := make([]int, len(inputArray))
-	copy(localArray, inputArray)
+	sample := make([]int, len(inputArray))
+	copy(sample, inputArray)
 
 	if cmpClause == 0 {
-		return localArray
+		return sample
 	}
 
 	if cmpClause < 0 {
-		for i := 0; i < (len(localArray) - 1); i++ {
-			for j := 0; j < (len(localArray) - i - 1); j++ {
-				if localArray[j] > localArray[j+1] {
-					localArray[j], localArray[j+1] = localArray[j+1], localArray[j]
+		for i := 0; i < (len(sample) - 1); i++ {
+			for j := 0; j < (len(sample) - i - 1); j++ {
+				if sample[j] > sample[j+1] {
+					sample[j], sample[j+1] = sample[j+1], sample[j]
 				}
 			}
 		}
 	}
 	if cmpClause > 0 {
-		for i := 0; i < (len(localArray) - 1); i++ {
-			for j := 0; j < (len(localArray) - i - 1); j++ {
-				if localArray[j] < localArray[j+1] {
-					localArray[j], localArray[j+1] = localArray[j+1], localArray[j]
+		for i := 0; i < (len(sample) - 1); i++ {
+			for j := 0; j < (len(sample) - i - 1); j++ {
+				if sample[j] < sample[j+1] {
+					sample[j], sample[j+1] = sample[j+1], sample[j]
 				}
 			}
 		}
 	}
 
-	return localArray
+	return sample
 }

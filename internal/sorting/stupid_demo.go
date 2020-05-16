@@ -10,29 +10,29 @@ import (
 )
 
 func StupidSortDemo(inputArray []int, cmpClause int8, indexDelay time.Duration, swapDelay time.Duration) []int {
-	localArray := make([]int, len(inputArray))
-	copy(localArray, inputArray)
+	sample := make([]int, len(inputArray))
+	copy(sample, inputArray)
 
-	arrayDemo := demo.NewArrayDemo(localArray, uilive.New())
+	arrayDemo := demo.NewArrayDemo(sample, uilive.New())
 
 	if cmpClause == 0 {
-		return localArray
+		return sample
 	}
 
 	index := 0
 
 	arrayDemo.Render([]int{0}, []int{}, []int{}, indexDelay)
 
-	for index < (len(localArray) - 1) {
+	for index < (len(sample) - 1) {
 		if cmpClause < 0 {
-			if localArray[index] < localArray[index+1] {
+			if sample[index] < sample[index+1] {
 				index++
 				arrayDemo.Render([]int{index}, []int{}, []int{}, indexDelay)
 			} else {
 				arrayDemo.SetColor(color.Red)
 				arrayDemo.Render([]int{}, []int{index, index + 1}, []int{}, swapDelay)
 
-				localArray[index], localArray[index+1] = localArray[index+1], localArray[index]
+				sample[index], sample[index+1] = sample[index+1], sample[index]
 
 				arrayDemo.SetColor(color.Green)
 				arrayDemo.Render([]int{}, []int{index, index + 1}, []int{}, swapDelay)
@@ -42,14 +42,14 @@ func StupidSortDemo(inputArray []int, cmpClause int8, indexDelay time.Duration, 
 			}
 		}
 		if cmpClause > 0 {
-			if localArray[index] > localArray[index+1] {
+			if sample[index] > sample[index+1] {
 				index++
 				arrayDemo.Render([]int{index}, []int{}, []int{}, indexDelay)
 			} else {
 				arrayDemo.SetColor(color.Red)
 				arrayDemo.Render([]int{}, []int{index, index + 1}, []int{}, swapDelay)
 
-				localArray[index], localArray[index+1] = localArray[index+1], localArray[index]
+				sample[index], sample[index+1] = sample[index+1], sample[index]
 
 				arrayDemo.SetColor(color.Green)
 				arrayDemo.Render([]int{}, []int{index, index + 1}, []int{}, swapDelay)
@@ -62,5 +62,5 @@ func StupidSortDemo(inputArray []int, cmpClause int8, indexDelay time.Duration, 
 
 	arrayDemo.Close()
 
-	return localArray
+	return sample
 }

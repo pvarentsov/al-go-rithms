@@ -6,6 +6,7 @@ help:
 	@echo
 	@echo "   stupid-sort   - Run stupid sorting demo"
 	@echo "   bubble-sort   - Run bubble sorting demo"
+	@echo "   shaker-sort   - Run shaker sorting demo"
 	@echo
 	@echo "   fmt           - Format source code"
 
@@ -16,6 +17,10 @@ stupid-sort:
 .PHONY: bubble-sort
 bubble-sort:
 	go run ./cmd/bubble_sorting_demo.go
+	
+.PHONY: shaker-sort
+shaker-sort:
+	go run ./cmd/shaker_sorting_demo.go
 
 .PHONY: fmt
 fmt:
