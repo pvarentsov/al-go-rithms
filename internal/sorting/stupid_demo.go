@@ -1,9 +1,10 @@
 package sorting
 
 import (
+	"github.com/gookit/color"
 	"time"
 
-	"github.com/pvarentsov/al-go-rithms/internal/render"
+	"github.com/pvarentsov/al-go-rithms/internal/demo"
 
 	"github.com/gosuri/uilive"
 )
@@ -12,47 +13,54 @@ func StupidSortDemo(inputArray []int, cmpClause int8, indexDelay time.Duration, 
 	localArray := make([]int, len(inputArray))
 	copy(localArray, inputArray)
 
+	arrayDemo := demo.NewArrayDemo(localArray, uilive.New())
+
 	if cmpClause == 0 {
 		return localArray
 	}
 
 	index := 0
 
-	writer := uilive.New()
-	writer.Start()
-
-	render.MarkArrayIndex(localArray, 0, indexDelay, writer, make([]int, 0))
+	arrayDemo.Render([]int{0}, []int{}, []int{}, indexDelay)
 
 	for index < (len(localArray) - 1) {
 		if cmpClause < 0 {
 			if localArray[index] < localArray[index+1] {
 				index++
-				render.MarkArrayIndex(localArray, index, indexDelay, writer, make([]int, 0))
+				arrayDemo.Render([]int{index}, []int{}, []int{}, indexDelay)
 			} else {
-				render.SwapArrayElements(localArray, index, index+1, swapDelay, false, writer, make([]int, 0))
+				arrayDemo.SetColor(color.Red)
+				arrayDemo.Render([]int{}, []int{index, index + 1}, []int{}, swapDelay)
+
 				localArray[index], localArray[index+1] = localArray[index+1], localArray[index]
-				render.SwapArrayElements(localArray, index, index+1, swapDelay, true, writer, make([]int, 0))
+
+				arrayDemo.SetColor(color.Green)
+				arrayDemo.Render([]int{}, []int{index, index + 1}, []int{}, swapDelay)
 
 				index = 0
-				render.MarkArrayIndex(localArray, index, indexDelay, writer, make([]int, 0))
+				arrayDemo.Render([]int{index}, []int{}, []int{}, indexDelay)
 			}
 		}
 		if cmpClause > 0 {
 			if localArray[index] > localArray[index+1] {
 				index++
-				render.MarkArrayIndex(localArray, index, indexDelay, writer, make([]int, 0))
+				arrayDemo.Render([]int{index}, []int{}, []int{}, indexDelay)
 			} else {
-				render.SwapArrayElements(localArray, index, index+1, swapDelay, false, writer, make([]int, 0))
+				arrayDemo.SetColor(color.Red)
+				arrayDemo.Render([]int{}, []int{index, index + 1}, []int{}, swapDelay)
+
 				localArray[index], localArray[index+1] = localArray[index+1], localArray[index]
-				render.SwapArrayElements(localArray, index, index+1, swapDelay, true, writer, make([]int, 0))
+
+				arrayDemo.SetColor(color.Green)
+				arrayDemo.Render([]int{}, []int{index, index + 1}, []int{}, swapDelay)
 
 				index = 0
-				render.MarkArrayIndex(localArray, index, indexDelay, writer, make([]int, 0))
+				arrayDemo.Render([]int{index}, []int{}, []int{}, indexDelay)
 			}
 		}
 	}
 
-	writer.Stop()
+	arrayDemo.Close()
 
 	return localArray
 }
