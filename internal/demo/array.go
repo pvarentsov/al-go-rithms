@@ -49,7 +49,7 @@ func (demo *ArrayDemo) Render(underscoredIndexes []int, coloredIndexes []int, bo
 		strArray[i] = color.Bold.Sprintf("%s", strArray[i])
 	}
 
-	color.Fprintf(demo.writer, "[ %s ]\n\n", strings.Join(strArray, " "))
+	color.Fprintf(demo.writer, "%s\n\n", strings.Join(strArray, " "))
 
 	time.Sleep(time.Millisecond * delay)
 }
