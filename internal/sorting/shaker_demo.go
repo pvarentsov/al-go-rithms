@@ -1,10 +1,12 @@
 package sorting
 
 import (
+	"time"
+
+	"github.com/pvarentsov/al-go-rithms/internal/demo"
+
 	"github.com/gookit/color"
 	"github.com/gosuri/uilive"
-	"github.com/pvarentsov/al-go-rithms/internal/demo"
-	"time"
 )
 
 func ShakerSortDemo(inputArray []int, cmpClause int8, indexDelay time.Duration, swapDelay time.Duration) []int {

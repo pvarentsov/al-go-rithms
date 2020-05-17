@@ -22,6 +22,10 @@ bubble-sort:
 shaker-sort:
 	go run ./cmd/shaker_sorting_demo.go
 
+.PHONY: comb-sort
+comb-sort:
+	go run ./cmd/comb_sorting_demo.go
+
 .PHONY: fmt
 fmt:
 	go fmt ./...

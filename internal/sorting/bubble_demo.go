@@ -1,11 +1,11 @@
 package sorting
 
 import (
-	"github.com/gookit/color"
 	"time"
 
 	"github.com/pvarentsov/al-go-rithms/internal/demo"
 
+	"github.com/gookit/color"
 	"github.com/gosuri/uilive"
 )
 
