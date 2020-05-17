@@ -49,12 +49,12 @@ func ShakerSortDemo(inputArray []int, cmpClause int8, indexDelay time.Duration, 
 
 				if sample[i-1] > sample[i] {
 					arrayDemo.SetColor(color.Red)
-					arrayDemo.Render([]int{}, []int{i, i + 1}, alreadySortedIndexes, swapDelay)
+					arrayDemo.Render([]int{}, []int{i, i - 1}, alreadySortedIndexes, swapDelay)
 
 					sample[i], sample[i-1] = sample[i-1], sample[i]
 
 					arrayDemo.SetColor(color.Green)
-					arrayDemo.Render([]int{}, []int{i, i + 1}, alreadySortedIndexes, swapDelay)
+					arrayDemo.Render([]int{}, []int{i, i - 1}, alreadySortedIndexes, swapDelay)
 				}
 				if i-1 == leftIndex {
 					alreadySortedIndexes = append(alreadySortedIndexes, leftIndex)
@@ -90,12 +90,12 @@ func ShakerSortDemo(inputArray []int, cmpClause int8, indexDelay time.Duration, 
 
 				if sample[i-1] < sample[i] {
 					arrayDemo.SetColor(color.Red)
-					arrayDemo.Render([]int{}, []int{i, i + 1}, alreadySortedIndexes, swapDelay)
+					arrayDemo.Render([]int{}, []int{i, i - 1}, alreadySortedIndexes, swapDelay)
 
 					sample[i], sample[i-1] = sample[i-1], sample[i]
 
 					arrayDemo.SetColor(color.Green)
-					arrayDemo.Render([]int{}, []int{i, i + 1}, alreadySortedIndexes, swapDelay)
+					arrayDemo.Render([]int{}, []int{i, i - 1}, alreadySortedIndexes, swapDelay)
 				}
 				if i-1 == leftIndex {
 					alreadySortedIndexes = append(alreadySortedIndexes, leftIndex)
