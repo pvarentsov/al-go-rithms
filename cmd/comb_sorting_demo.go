@@ -11,7 +11,7 @@ import (
 func main() {
 	inputArray := generator.GenerateArray(10, true)
 
-	fmt.Printf("Stupid sorting: %d\n\n", inputArray)
+	fmt.Printf("Comb sorting: %d\n\n", inputArray)
 	time.Sleep(time.Millisecond * 2000)
 
 	sorting.CombSortDemo(inputArray, -1, 200, 500)
