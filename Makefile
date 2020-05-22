@@ -26,6 +26,10 @@ shaker-sort:
 comb-sort:
 	go run ./cmd/comb_sorting_demo.go
 
+.PHONY: quick-sort
+quick-sort:
+	go run ./cmd/quick_sorting_demo.go
+
 .PHONY: fmt
 fmt:
 	go fmt ./...
