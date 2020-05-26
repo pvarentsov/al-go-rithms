@@ -13,8 +13,7 @@ func QuickSort(sample []int, cmpClause int8) []int {
 	pivotIndex := len(sample) >> 1
 	pivot := sample[pivotIndex]
 
-	left := make([]int, 0)
-	right := make([]int, 0)
+	left, right := make([]int, 0), make([]int, 0)
 
 	for _, v := range sample {
 		if cmpClause < 0 {
@@ -35,8 +34,7 @@ func QuickSort(sample []int, cmpClause int8) []int {
 		}
 	}
 
-	left = QuickSort(left, cmpClause)
-	right = QuickSort(right, cmpClause)
+	left, right = QuickSort(left, cmpClause), QuickSort(right, cmpClause)
 
 	sorted := append(left, pivot)
 	sorted = append(sorted, right...)
