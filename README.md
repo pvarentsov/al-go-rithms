@@ -44,6 +44,15 @@ Learning of algorithms and data structures in Go
     <img src="./assets/algorithms/comb-sorting-example.gif">
 </details>
 
+### [Quick](./internal/sorting/quick.go)
+<details>
+  <summary>
+    Demo
+  </summary>
+    <br>
+    <img src="./assets/algorithms/quick-sorting-example.gif">
+</details>
+
 ## License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](./LICENSE)

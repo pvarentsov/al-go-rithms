@@ -2,17 +2,25 @@ package main
 
 import (
 	"fmt"
+	"time"
 
 	"github.com/pvarentsov/al-go-rithms/internal/generator"
 	"github.com/pvarentsov/al-go-rithms/internal/sorting"
+
+	"github.com/gosuri/uilive"
+	"github.com/pvarentsov/al-go-rithms/internal/demo"
 )
 
 func main() {
-	inputArray := generator.GenerateArray(10, true)
+	sortedArray := generator.GenerateArray(10, true)
 
-	fmt.Printf("Quick sorting: %d\n\n", inputArray)
+	fmt.Printf("Quick sorting: %d\n\n", sortedArray)
+	time.Sleep(time.Millisecond * 2000)
 
-	inputArray = sorting.QuickSort(inputArray, -1)
+	sortedArray = sorting.QuickSort(sortedArray, -1)
 
-	fmt.Printf("%d\n\n", inputArray)
+	arrayDemo := demo.NewArrayDemo(sortedArray, uilive.New())
+	arrayDemo.Render([]int{len(sortedArray) - 1}, []int{}, []int{}, 200)
+
+	fmt.Print("Wow! Very quick!\n\n")
 }

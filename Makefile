@@ -8,6 +8,7 @@ help:
 	@echo "   bubble-sort   - Run bubble sorting demo"
 	@echo "   shaker-sort   - Run shaker sorting demo"
 	@echo "   comb-sort     - Run comb sorting demo"
+	@echo "   quick-sort    - Run quick sorting demo"
 	@echo
 	@echo "   fmt           - Format source code"
 
