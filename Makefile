@@ -7,6 +7,7 @@ help:
 	@echo "   stupid-sort   - Run stupid sorting demo"
 	@echo "   bubble-sort   - Run bubble sorting demo"
 	@echo "   shaker-sort   - Run shaker sorting demo"
+	@echo "   comb-sort     - Run comb sorting demo"
 	@echo
 	@echo "   fmt           - Format source code"
 
