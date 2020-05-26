@@ -21,6 +21,7 @@ func main() {
 
 	arrayDemo := demo.NewArrayDemo(sortedArray, uilive.New())
 	arrayDemo.Render([]int{len(sortedArray) - 1}, []int{}, []int{}, 200)
+	arrayDemo.Close()
 
 	fmt.Print("Wow! Very quick!\n\n")
 }
